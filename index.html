@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floppa | Creatividad que Impacta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --Floppa-negro: #1C1C1B;
+      --Floppa-marron: #AA6C43;
+      --Floppa-durazno: #E2A688;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-[#FFF8F5] text-[var(--Floppa-negro)]">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="Logo 50x50.png" alt="Logo Floppa" class="h-10 w-auto">
+      </a>
+
+      <ul class="hidden md:flex gap-8 font-medium">
+        <li><a href="index.html" class="hover:text-[var(--Floppa-marron)]">Inicio</a></li>
+        <li><a href="QuienesSomos.html" class="hover:text-[var(--Floppa-marron)]">Quiénes Somos</a></li>
+        <li><a href="Contacto.html" class="hover:text-[var(--Floppa-marron)]">Contacto</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa -->
+      <button id="menu-btn" class="md:hidden text-[var(--Floppa-marron)]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="hidden bg-white md:hidden border-t">
+      <ul class="flex flex-col items-center gap-4 py-4">
+        <li><a href="index.html" class="hover:text-[var(--Floppa-marron)]">Inicio</a></li>
+        <li><a href="QuienesSomos.html" class="hover:text-[var(--Floppa-marron)]">Quiénes Somos</a></li>
+        <li><a href="Contacto.html" class="hover:text-[var(--Floppa-marron)]">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- HERO / INICIO -->
+  <section id="inicio" class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 text-white">
+    <!-- Imagen de fondo -->
+    <img src="FotoEquipo (2).jpeg" alt="Equipo Floppa" class="absolute inset-0 w-full h-full object-cover opacity-30">
+
+    <!-- Gradiente encima para mejor lectura del texto -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[var(--Floppa-marron)]/60 via-transparent to-[var(--Floppa-durazno)]/60"></div>
+
+    <!-- Contenido centrado -->
+    <div class="relative z-10 max-w-3xl">
+      <h2 class="text-4xl md:text-6xl text-black font-bold mb-4">Bienvenido a <span class="text-[var(--Floppa-marron)]">Floppa Studios</span></h2>
+      <p class="mb-6 text-lg md:text-xl text-black">Transformamos ideas en experiencias visuales que conectan. Branding, diseño, contenido y creatividad que deja huella.</p>
+      <a href="#trabajos" class="bg-white text-[var(--Floppa-marron)] px-6 py-3 rounded-full font-semibold hover:bg-[var(--Floppa-durazno)] transition">Ver Trabajos</a>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section id="quienes" class="py-20 bg-[#FFF2E8] text-center">
+    <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-6">Quiénes Somos</h3>
+    <p class="max-w-3xl mx-auto text-lg">En Floppa somos un equipo de creativos, diseñadores y soñadores que creen en el poder de la estética y la estrategia. Nos especializamos en crear marcas memorables, contenido visual y experiencias digitales con propósito.</p>
+  </section>
+
+  <!-- TRABAJOS -->
+  <section id="trabajos" class="py-20 text-center">
+    <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-10">Nuestros Trabajos</h3>
+
+    <div class="flex justify-center px-6">
+      <!-- PROYECTO GERC -->
+      <a href="Proyecto.html" 
+         class="bg-white rounded-2xl shadow-md overflow-hidden w-full sm:w-96 transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="bg-[#FFF2E8] flex justify-center items-center h-56 transition duration-300 hover:brightness-105">
+          <!-- Logo del proyecto -->
+          <img src="LogoGerc.png" alt="Logo Deportivas Gerc" class="h-28 w-auto transition-transform duration-300 hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h4 class="font-semibold text-xl mb-2 text-[var(--Floppa-negro)]">Deportivas Gerc</h4>
+          <p class="text-gray-600 text-base">
+            Identidad visual completa para una marca de ropa deportiva: branding, papelería y diseño con código QR.
+          </p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-20 bg-[#FFF2E8] text-center">
+    <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-6">Contáctanos</h3>
+    <p class="mb-8 text-lg">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+    <a href="Contacto.html" class="bg-[var(--Floppa-marron)] text-white px-6 py-3 rounded-full hover:bg-[var(--Floppa-durazno)] transition">Escríbenos</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-center py-6 border-t">
+    <p class="text-gray-500 text-sm">© 2025 Floppa Studios. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

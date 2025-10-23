@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes Somos | Floppla Studios</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --floppla-negro: #1C1C1B;
+      --floppla-marron: #AA6C43;
+      --floppla-durazno: #E2A688;
+    }
+  </style>
+</head>
+<body class="bg-[#FFF8F5] text-[var(--floppla-negro)]">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="Logo 50x50.png" alt="Logo Floppla" class="h-10 w-auto">
+      </a>
+      <ul class="hidden md:flex gap-8 font-medium">
+        <li><a href="index.html" class="hover:text-[var(--floppla-marron)]">Inicio</a></li>
+        <li><a href="QuienesSomos.html" class="text-[var(--floppla-marron)] font-semibold">Quiénes Somos</a></li>
+        <li><a href="Contacto.html" class="hover:text-[var(--floppla-marron)]">Contacto</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-[var(--floppla-marron)]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden bg-white md:hidden border-t">
+      <ul class="flex flex-col items-center gap-4 py-4">
+        <li><a href="index.html" class="hover:text-[var(--floppla-marron)]">Inicio</a></li>
+        <li><a href="QuienesSomos.html" class="text-[var(--floppla-marron)] font-semibold">Quiénes Somos</a></li>
+        <li><a href="Contacto.html" class="hover:text-[var(--floppla-marron)]">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-16 text-center bg-gradient-to-r from-[var(--floppla-marron)] to-[var(--floppla-durazno)] text-white">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Quiénes Somos</h1>
+    <p class="max-w-2xl mx-auto text-lg">“Da vida a lo que imaginas”</p>
+  </section>
+
+  <!-- PRESENTACIÓN -->
+  <section class="py-16 text-center bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-[var(--floppla-marron)] mb-6">Nuestra Esencia</h2>
+      <p class="text-lg leading-relaxed">
+        En <strong>Floppla Studios</strong> impulsamos marcas dentro de la industria textil. Nos especializamos en la creación de contenidos visuales, branding y estrategias digitales que potencian la presencia de las empresas en entornos online.  
+        <br><br>
+        Ubicados en la localidad de <strong>Villa Mayor</strong>, promovemos la integración entre la creatividad, la tecnología y el sector textil, impulsando la transformación digital a través de soluciones visuales innovadoras.
+      </p>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="py-20 bg-[#FFF2E8] text-center">
+    <h2 class="text-3xl font-bold text-[var(--floppla-marron)] mb-10">Nuestro Equipo</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto px-6">
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <h4 class="font-semibold text-lg text-[var(--floppla-marron)]">Arturo Moreno</h4>
+        <p class="text-gray-600 text-sm">Coordinador de proyecto</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <h4 class="font-semibold text-lg text-[var(--floppla-marron)]">Valentina Penagos</h4>
+        <p class="text-gray-600 text-sm">Community Manager</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <h4 class="font-semibold text-lg text-[var(--floppla-marron)]">Abril Torrijos</h4>
+        <p class="text-gray-600 text-sm">Gestora de redes sociales</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <h4 class="font-semibold text-lg text-[var(--floppla-marron)]">Nicolás Betancourt</h4>
+        <p class="text-gray-600 text-sm">Investigador de contenidos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMAS Y SOLUCIONES -->
+  <section class="py-20 text-center">
+    <h2 class="text-3xl font-bold text-[var(--floppla-marron)] mb-10">Qué Problemas Resolvemos</h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 px-6 text-left">
+      <div class="bg-white rounded-2xl shadow-md p-8">
+        <h3 class="text-2xl font-semibold mb-4 text-[var(--floppla-marron)]">Situación del Cliente</h3>
+        <ul class="list-disc list-inside text-lg leading-relaxed">
+          <li>Falta de presencia digital y redes sociales inactivas.</li>
+          <li>Ausencia de imagen corporativa sólida.</li>
+          <li>Baja fidelidad de clientes y pérdida de oportunidades de conexión.</li>
+          <li>Dificultad para posicionarse en el entorno online.</li>
+        </ul>
+      </div>
+      <div class="bg-[#FFF2E8] rounded-2xl shadow-inner p-8">
+        <h3 class="text-2xl font-semibold mb-4 text-[var(--floppla-marron)]">Soluciones Propuestas</h3>
+        <ul class="list-disc list-inside text-lg leading-relaxed">
+          <li>Desarrollo completo de branding e identidad visual.</li>
+          <li>Creación y gestión de redes sociales.</li>
+          <li>Campañas de anuncios y colaboración con microinfluencers.</li>
+          <li>Diseño de programas de fidelización y presencia constante en línea.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR -->
+  <section class="py-20 bg-[#FFF2E8] text-center">
+    <h2 class="text-3xl font-bold text-[var(--floppla-marron)] mb-6">Nuestro Sector</h2>
+    <div class="max-w-5xl mx-auto px-6 text-lg leading-relaxed">
+      <p>
+        En <strong>Floppla Studios</strong> trabajamos dentro del amplio mundo textil: moda, confección, textiles para el hogar y marcas emergentes.  
+        Nos dirigimos a fabricantes, diseñadores, emprendedores y empresas que buscan fortalecer su presencia en el mercado digital.
+      </p>
+      <p class="mt-6">
+        El sector textil colombiano muestra un crecimiento constante: la producción real ha aumentado un <strong>14.9%</strong> y el empleo un <strong>3.6%</strong>, con proyecciones positivas del <strong>9.1%</strong> en gasto de moda para 2024.  
+        (Fuentes: Observatorio Económico de Bogotá, Inexmoda, MundoTextil)
+      </p>
+    </div>
+  </section>
+
+ <!-- ENFOQUE -->
+<section class="py-20 pb-32 text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-[var(--floppla-marron)] mb-6">Cómo Nos Conectamos</h2>
+    <p class="text-lg leading-relaxed">
+      En Floppla Studios conectamos la creatividad digital con la industria textil, ofreciendo soluciones visuales que impulsan la identidad de marca y mejoran la presencia de los productos en entornos digitales.  
+      <br><br>
+      Buscamos que cada marca “dé vida a lo que imagina” a través del diseño, la estrategia y la innovación visual.
+    </p>
+  </div>
+</section>
+  
+    <!-- CALL TO ACTION -->
+<section class="py-20 bg-white text-center">
+  <div class="max-w-3xl mx-auto rounded-2xl shadow-lg p-10 text-[var(--floppla-negro)]">
+    <h2 class="text-3xl font-bold mb-4 text-[var(--floppla-marron)]">¿Te Gustó Lo Que Viste?</h2>
+    <p class="text-lg mb-6">
+      Si quieres llevar tu marca al siguiente nivel y trabajar con un equipo creativo que da vida a tus ideas, estamos listos para ayudarte.  
+      ¡Hablemos y hagamos crecer tu presencia digital juntos!
+    </p>
+    <a href="contacto.html" class="inline-block bg-[var(--floppla-marron)] hover:bg-[var(--floppla-durazno)] text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300">
+      Contáctanos
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-center py-6 border-t">
+    <p class="text-gray-500 text-sm">© 2025 Floppla Studios. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

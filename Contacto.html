@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos | Floppla Studios</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --floppla-negro: #1C1C1B;
+      --floppla-marron: #AA6C43;
+      --floppla-durazno: #E2A688;
+    }
+    .modal-bg {
+      background-color: rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body class="bg-[#FFF8F5] text-[var(--floppla-negro)] flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="Logo 50x50.png" alt="Logo Floppla" class="h-10 w-auto">
+      </a>
+      <ul class="hidden md:flex gap-8 font-medium">
+        <li><a href="index.html" class="hover:text-[var(--floppla-marron)]">Inicio</a></li>
+        <li><a href="QuienesSomos.html" class="hover:text-[var(--floppla-marron)]">Quiénes Somos</a></li>
+        <li><a href="Contacto.html" class="text-[var(--floppla-marron)] font-semibold">Contacto</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-[var(--floppla-marron)]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden bg-white md:hidden border-t">
+      <ul class="flex flex-col items-center gap-4 py-4">
+        <li><a href="index.html" class="hover:text-[var(--floppla-marron)]">Inicio</a></li>
+        <li><a href="QuienesSomos.html" class="hover:text-[var(--floppla-marron)]">Quiénes Somos</a></li>
+        <li><a href="Contacto.html" class="text-[var(--floppla-marron)] font-semibold">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-16 text-center bg-gradient-to-r from-[var(--floppla-marron)] to-[var(--floppla-durazno)] text-white">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Contáctanos</h1>
+    <p class="max-w-2xl mx-auto text-lg">¡Estamos listos para ayudarte a dar vida a tus ideas!</p>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="flex-grow flex items-center justify-center py-20 bg-[#FFF8F5] text-[var(--floppla-negro)]">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-[var(--floppla-marron)] mb-10">Contáctanos</h2>
+
+      <!-- FORMULARIO -->
+      <div class="bg-white rounded-2xl shadow-md p-8 mb-10">
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label class="block mb-2 font-semibold" for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--floppla-marron)]" required>
+          </div>
+          <div>
+            <label class="block mb-2 font-semibold" for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--floppla-marron)]" required>
+          </div>
+          <div>
+            <label class="block mb-2 font-semibold" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--floppla-marron)]" required></textarea>
+          </div>
+          <button type="submit" class="bg-[var(--floppla-marron)] hover:bg-[var(--floppla-durazno)] text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300">
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+
+      <!-- REDES SOCIALES (QR) -->
+      <div class="text-center">
+        <p class="text-lg mb-4">Síguenos y contáctanos con los QR:</p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <div>
+            <p class="mb-2 font-semibold">Instagram</p>
+            <img src="Qr Instagram.jpeg" alt="Instagram QR" class="w-32 h-32 mx-auto">
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">TikTok</p>
+            <img src="QrTikTok.jpeg" alt="Facebook QR" class="w-32 h-32 mx-auto">
+          </div>
+         
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="fixed inset-0 flex items-center justify-center hidden modal-bg z-50">
+    <div class="bg-white rounded-2xl p-8 max-w-sm text-center shadow-lg">
+      <h3 class="text-2xl font-bold text-[var(--floppla-marron)] mb-4">¡Gracias! 🎉</h3>
+      <p>Gracias por ponerte en contacto con nosotros. Serás redirigido al inicio en unos segundos.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-center py-6 border-t">
+    <p class="text-gray-500 text-sm">© 2025 Floppla Studios. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const form = document.getElementById('contact-form');
+    const modal = document.getElementById('modal');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>
