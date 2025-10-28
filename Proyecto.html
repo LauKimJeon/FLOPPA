@@ -5,57 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto Creativo | Deportivas Gerc</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4/turn.min.css">
   <style>
     :root {
       --Floppa-negro: #1C1C1B;
       --Floppa-marron: #AA6C43;
       --Floppa-durazno: #E2A688;
     }
+
+    /* Estilo del visor tipo flipbook */
+    #flipbook {
+      width: 90%;
+      max-width: 900px;
+      height: 600px;
+      margin: 0 auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 16px;
+      background-color: #fff;
+    }
+
+    #flipbook .page {
+      background-color: #FFF8F5;
+      border-radius: 16px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .flip-controls {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body class="bg-[#FFF8F5] text-[var(--Floppa-negro)]">
 
- <!-- NAVBAR -->
-<header class="bg-white shadow-md fixed w-full top-0 z-50">
-  <nav class="container mx-auto flex justify-between items-center p-4">
-    <a href="index.html" class="flex items-center gap-2">
-      <img src="Logo 50x50.png" alt="Logo Floppa" class="h-10 w-auto">
-    </a>
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="Logo 50x50.png" alt="Logo Floppla" class="h-10 w-auto">
+      </a>
 
-    <ul class="hidden md:flex gap-8 font-medium">
-      <li><a href="index.html" class="hover:text-[var(--Floppa-marron)]">Inicio</a></li>
-      <li><a href="QuienesSomos.html" class="hover:text-[var(--Floppa-marron)]">Quiénes Somos</a></li>
-      <li><a href="Contacto.html" class="hover:text-[var(--Floppa-marron)]">Contacto</a></li>
-    </ul>
+      <ul class="hidden md:flex gap-8 font-medium">
+        <li><a href="index.html" class="hover:text-[var(--Floppa-marron)]">Inicio</a></li>
+        <li><a href="QuienesSomos.html" class="hover:text-[var(--Floppa-marron)]">Quiénes Somos</a></li>
+        <li><a href="Servicios.html" class="hover:text-[var(--Floppa-marron)]">Servicios</a></li>
+        <li><a href="Contacto.html" class="hover:text-[var(--Floppa-marron)]">Contacto</a></li>
+      </ul>
 
-    <!-- Botón hamburguesa -->
-    <button id="menu-btn" class="md:hidden text-[var(--Floppa-marron)]">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
-        viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </nav>
+      <button id="menu-btn" class="md:hidden text-[var(--Floppa-marron)]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
 
-  <!-- Menú móvil -->
-  <div id="mobile-menu" class="hidden bg-white md:hidden border-t">
-    <ul class="flex flex-col items-center gap-4 py-4">
-      <li><a href="index.html" class="hover:text-[var(--Floppa-marron)]">Inicio</a></li>
-      <li><a href="QuienesSomos.html" class="hover:text-[var(--Floppa-marron)]">Quiénes Somos</a></li>
-      <li><a href="Contacto.html" class="hover:text-[var(--Floppa-marron)]">Contacto</a></li>
-    </ul>
-  </div>
-</header>
+    <div id="mobile-menu" class="hidden bg-white md:hidden border-t">
+      <ul class="flex flex-col items-center gap-4 py-4">
+        <li><a href="index.html" class="hover:text-[var(--Floppa-marron)]">Inicio</a></li>
+        <li><a href="QuienesSomos.html" class="hover:text-[var(--Floppa-marron)]">Quiénes Somos</a></li>
+        <li><a href="Servicios.html" class="hover:text-[var(--Floppa-marron)]">Servicios</a></li>
+        <li><a href="Contacto.html" class="hover:text-[var(--Floppa-marron)]">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
 
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
   <!-- HERO -->
   <section class="pt-28 pb-16 text-center bg-gradient-to-r from-[var(--Floppa-marron)] to-[var(--Floppa-durazno)] text-white">
@@ -64,108 +86,26 @@
     <p class="max-w-2xl mx-auto mt-4 text-lg">“Calidad que se ve”</p>
   </section>
 
-  <!-- IDEA INICIAL -->
-  <section class="py-16 bg-white text-center">
-    <div class="max-w-3xl mx-auto px-6">
-      <h3 class="text-2xl font-semibold text-[var(--Floppa-marron)] mb-4">Idea Inicial del Logo</h3>
-      <p class="text-lg mb-6">
-        Antes de llegar al diseño final, el cliente deseaba un logo que representara dinamismo, energía y movimiento, reflejando la esencia deportiva de su marca.
-      </p>
-      <div class="bg-[#FFF2E8] p-8 rounded-2xl shadow-inner w-fit mx-auto">
-        <img src="BocetoInicial.jpg" alt="Boceto inicial Gerc" class="max-h-40 w-auto mx-auto">
-      </div>
-      <p class="text-sm text-gray-600 mt-4">Boceto de referencia conceptual — ejemplo de idea inicial del cliente.</p>
-    </div>
-  </section>
-
-<!-- LOGO FINAL INTERACTIVO -->
-<section class="py-20 text-center bg-[#FFF2E8] relative overflow-hidden">
-  <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-10">Logo Final</h3>
-
-  <!-- Contenedor del logo -->
-  <div class="relative flex justify-center mb-16 group">
-    <div class="bg-white p-10 rounded-3xl shadow-xl w-fit relative transition-transform duration-500 group-hover:scale-105">
-      <img src="LogoGerc.png" alt="Logo Deportivas Gerc" class="max-h-80 w-auto mx-auto">
-      
-      <!-- Flecha ROJA -->
-      <div class="absolute opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out -top-6 left-1/2 -translate-x-[130%] flex flex-col items-center">
-        <div class="w-1 h-12 bg-[#D62828] rounded-full animate-bounce"></div>
-        <div class="bg-[#D62828] text-white text-sm px-3 py-1 rounded-full mt-2 shadow-md">
-          Pasión y Energía
-        </div>
-      </div>
-
-      <!-- Flecha CAFÉ -->
-      <div class="absolute opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out bottom-0 right-1/2 translate-x-[130%] flex flex-col items-center delay-200">
-        <div class="w-1 h-12 bg-[#7B3F00] rounded-full animate-bounce"></div>
-        <div class="bg-[#7B3F00] text-white text-sm px-3 py-1 rounded-full mt-2 shadow-md">
-          Estabilidad y Confianza
-        </div>
-      </div>
-
-      <!-- Flecha NEGRA -->
-      <div class="absolute opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out bottom-10 left-1/2 -translate-x-[170%] flex flex-col items-center delay-300">
-        <div class="w-1 h-12 bg-black rounded-full animate-bounce"></div>
-        <div class="bg-black text-white text-sm px-3 py-1 rounded-full mt-2 shadow-md">
-          Elegancia y Fuerza
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Descripción -->
-  <div class="max-w-4xl mx-auto text-left px-6">
-    <h4 class="text-2xl font-semibold text-[var(--Floppa-marron)] mb-4 text-center">Psicología del Color y Símbolo</h4>
-    <p class="text-lg leading-relaxed mb-4">
-      El logotipo de <strong>Deportivas Gerc</strong> combina los tonos <strong>rojo, café y negro</strong>, que transmiten fuerza, elegancia y pasión por el movimiento.  
-      El rojo refleja <strong>energía y determinación</strong>, el café aporta <strong>seguridad y conexión con lo natural</strong>, y el negro proyecta <strong>poder, sofisticación y confianza</strong>.
-    </p>
-    <p class="text-lg leading-relaxed">
-      El ícono del <strong>león</strong> representa el liderazgo, la valentía y el dominio, reforzando la identidad de una marca deportiva que inspira grandeza, perseverancia y orgullo.
-    </p>
-  </div>
-</section>
-
-
-
-
-  <!-- CONTENIDO DEL PROYECTO -->
+  <!-- CATÁLOGO -->
   <section class="py-20 bg-white text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-8">Aplicaciones de Marca</h3>
-      <p class="text-lg leading-relaxed mb-12">
-        El desarrollo incluyó tarjetas de presentación, hoja membretada y materiales digitales, creando una identidad visual coherente y adaptable para diferentes soportes.
+    <div class="max-w-5xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-8">Catálogo Interactivo</h3>
+      <p class="text-lg leading-relaxed mb-10">
+        Explora el catálogo completo de <strong>Deportivas Gerc</strong> con un efecto de páginas animadas tipo flipbook 📖.  
+        Puedes hojearlo directamente o descargarlo en formato PDF.
       </p>
 
-      <!-- TARJETAS -->
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-[#FFF8F5] p-6 rounded-2xl shadow-md">
-          <h4 class="text-xl font-semibold text-[var(--Floppa-marron)] mb-2">Tarjeta de Presentación (Frontal)</h4>
-          <img src="Tarjeta1.jpg" alt="Tarjeta Gerc Frente" class="rounded-xl shadow-sm mx-auto">
-        </div>
-        <div class="bg-[#FFF8F5] p-6 rounded-2xl shadow-md">
-          <h4 class="text-xl font-semibold text-[var(--Floppa-marron)] mb-2">Tarjeta de Presentación (Reverso)</h4>
-          <img src="Tarjeta2.jpg" alt="Tarjeta Gerc Reverso" class="rounded-xl shadow-sm mx-auto">
-        </div>
+      <div id="flipbook" class="shadow-2xl rounded-3xl overflow-hidden"></div>
+
+      <div class="flip-controls">
+        <button id="prev" class="bg-[var(--Floppa-marron)] text-white px-4 py-2 rounded-full hover:bg-[var(--Floppa-durazno)] mr-3">⬅️ Anterior</button>
+        <button id="next" class="bg-[var(--Floppa-marron)] text-white px-4 py-2 rounded-full hover:bg-[var(--Floppa-durazno)]">Siguiente ➡️</button>
       </div>
 
-       <!-- HOJA MEMBRETADA -->
-      <div class="mt-12 bg-[#FFF8F5] p-8 rounded-2xl shadow-md">
-        <h4 class="text-xl font-semibold text-[var(--Floppa-marron)] mb-4">Hoja Membretada</h4>
-        <div class="flex justify-center">
-          <img src="HojaMembretada.jpg" alt="Hoja membretada Gerc" class="rounded-xl shadow-sm max-w-[50%] mx-auto">
-        </div>
-      </div>
-
-       <!-- REDES SOCIALES -->
-      <div class="mt-12 bg-[#FFF8F5] p-8 rounded-2xl shadow-md">
-        <h4 class="text-xl font-semibold text-[var(--Floppa-marron)] mb-4">Redes Sociales</h4>
-        <p class="text-lg mb-6">
-          Para fortalecer la presencia digital de la marca, se crearon diseños adaptados a redes sociales y se estableció una estética coherente con su identidad visual.  
-          Puedes visitar su perfil oficial en Instagram haciendo clic abajo:
-        </p>
-        <a href="https://www.instagram.com/deportivas.gerc?igsh=MXc3dnAzZXpja2hxMA==" target="_blank" class="inline-block bg-[var(--Floppa-marron)] text-white px-6 py-3 rounded-full hover:bg-[var(--Floppa-durazno)] transition font-medium">
-          Visitar Instagram de Deportivas Gerc
+      <div class="mt-8">
+        <a href="Catalogo.pdf" download 
+          class="inline-block bg-[var(--Floppa-marron)] text-white px-8 py-3 rounded-full hover:bg-[var(--Floppa-durazno)] transition font-semibold shadow-md">
+          Descargar Catálogo en PDF
         </a>
       </div>
     </div>
@@ -173,8 +113,41 @@
 
   <!-- FOOTER -->
   <footer class="bg-white text-center py-6 border-t mt-12">
-    <p class="text-gray-500 text-sm">© 2025 Floppa. Proyecto realizado por el equipo creativo.</p>
+    <p class="text-gray-500 text-sm">© 2025 Floppla. Proyecto realizado por el equipo creativo.</p>
   </footer>
+
+  <!-- Librerías -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4/turn.min.js"></script>
+  <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+  <script>
+    const pdfPath = 'Catalogo.pdf';
+    const flipbook = $('#flipbook');
+
+    const renderPDF = async () => {
+      const pdf = await pdfjsLib.getDocument(pdfPath).promise;
+      for (let i = 1; i <= pdf.numPages; i++) {
+        const page = await pdf.getPage(i);
+        const viewport = page.getViewport({ scale: 1.5 });
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        await page.render({ canvasContext: context, viewport }).promise;
+        const img = new Image();
+        img.src = canvas.toDataURL();
+        const pageDiv = $('<div />', { class: 'page' }).append(img);
+        flipbook.append(pageDiv);
+      }
+      flipbook.turn({ width: 900, height: 600, autoCenter: true });
+    };
+
+    $('#prev').on('click', () => flipbook.turn('previous'));
+    $('#next').on('click', () => flipbook.turn('next'));
+
+    renderPDF();
+  </script>
 
 </body>
 </html>
