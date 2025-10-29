@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios | Floppla Studios</title>
+  <title>Contáctanos | Floppla Studios</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
@@ -11,9 +11,14 @@
       --floppla-marron: #AA6C43;
       --floppla-durazno: #E2A688;
     }
+
+    .modal-bg {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
   </style>
 </head>
-<body class="bg-[#FFF8F5] text-[var(--floppla-negro)]">
+
+<body class="bg-[#FFF8F5] text-[var(--floppla-negro)] flex flex-col min-h-screen">
 
   <!-- NAVBAR -->
   <header class="bg-white shadow-md fixed w-full top-0 z-50">
@@ -25,10 +30,11 @@
       <ul class="hidden md:flex gap-8 font-medium">
         <li><a href="index.html" class="hover:text-[var(--floppla-marron)]">Inicio</a></li>
         <li><a href="QuienesSomos.html" class="hover:text-[var(--floppla-marron)]">Quiénes Somos</a></li>
-        <li><a href="Servicios.html" class="text-[var(--floppla-marron)] font-semibold">Servicios</a></li>
-        <li><a href="Contacto.html" class="hover:text-[var(--floppla-marron)]">Contacto</a></li>
+        <li><a href="Servicios.html" class="hover:text-[var(--floppla-marron)]">Servicios</a></li>
+        <li><a href="Contacto.html" class="text-[var(--floppla-marron)] font-semibold">Contacto</a></li>
       </ul>
 
+      <!-- Botón hamburguesa -->
       <button id="menu-btn" class="md:hidden text-[var(--floppla-marron)]">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
           viewBox="0 0 24 24" stroke="currentColor">
@@ -38,101 +44,105 @@
       </button>
     </nav>
 
+    <!-- Menú móvil -->
     <div id="mobile-menu" class="hidden bg-white md:hidden border-t">
       <ul class="flex flex-col items-center gap-4 py-4">
         <li><a href="index.html" class="hover:text-[var(--floppla-marron)]">Inicio</a></li>
         <li><a href="QuienesSomos.html" class="hover:text-[var(--floppla-marron)]">Quiénes Somos</a></li>
-        <li><a href="Servicios.html" class="text-[var(--floppla-marron)] font-semibold">Servicios</a></li>
-        <li><a href="Contacto.html" class="hover:text-[var(--floppla-marron)]">Contacto</a></li>
+        <li><a href="Servicios.html" class="hover:text-[var(--floppla-marron)]">Servicios</a></li>
+        <li><a href="Contacto.html" class="text-[var(--floppla-marron)] font-semibold">Contacto</a></li>
       </ul>
     </div>
   </header>
 
+  <!-- HERO -->
+  <section class="pt-28 pb-16 text-center bg-gradient-to-r from-[var(--floppla-marron)] to-[var(--floppla-durazno)] text-white">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Contáctanos</h1>
+    <p class="max-w-2xl mx-auto text-lg">¡Estamos listos para ayudarte a dar vida a tus ideas!</p>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="flex-grow flex items-center justify-center py-20 bg-[#FFF8F5] text-[var(--floppla-negro)]">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-[var(--floppla-marron)] mb-10">Contáctanos</h2>
+
+      <!-- FORMULARIO -->
+      <div class="bg-white rounded-2xl shadow-md p-8 mb-10">
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label class="block mb-2 font-semibold" for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--floppla-marron)]" required>
+          </div>
+
+          <div>
+            <label class="block mb-2 font-semibold" for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com"
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--floppla-marron)]" required>
+          </div>
+
+          <div>
+            <label class="block mb-2 font-semibold" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..."
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--floppla-marron)]" required></textarea>
+          </div>
+
+          <button type="submit"
+            class="bg-[var(--floppla-marron)] hover:bg-[var(--floppla-durazno)] text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300">
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+
+      <!-- REDES SOCIALES (QR) -->
+      <div class="text-center">
+        <p class="text-lg mb-4">Síguenos y contáctanos con los QR:</p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <div>
+            <p class="mb-2 font-semibold">Instagram</p>
+            <img src="Qr Instagram.jpeg" alt="Instagram QR" class="w-32 h-32 mx-auto rounded-xl shadow-md">
+          </div>
+          <div>
+            <p class="mb-2 font-semibold">TikTok</p>
+            <img src="QrTikTok.jpeg" alt="TikTok QR" class="w-32 h-32 mx-auto rounded-xl shadow-md">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="fixed inset-0 flex items-center justify-center hidden modal-bg z-50">
+    <div class="bg-white rounded-2xl p-8 max-w-sm text-center shadow-lg">
+      <h3 class="text-2xl font-bold text-[var(--floppla-marron)] mb-4">¡Gracias! 🎉</h3>
+      <p>Gracias por ponerte en contacto con nosotros. Serás redirigido al inicio en unos segundos.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-center py-6 border-t mt-12">
+    <p class="text-gray-500 text-sm">© 2025 Floppla Studios. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- SCRIPT -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+
+    const form = document.getElementById('contact-form');
+    const modal = document.getElementById('modal');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 3000);
+    });
   </script>
-
-  <!-- HERO -->
-  <section class="pt-28 pb-16 text-center bg-gradient-to-r from-[var(--floppla-marron)] to-[var(--floppla-durazno)] text-white">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Nuestros Servicios</h1>
-    <p class="max-w-3xl mx-auto text-lg md:text-xl">Paquetes creativos diseñados para elevar tu marca al siguiente nivel.</p>
-  </section>
-
-  <!-- PLANES -->
-  <section class="py-20 bg-[#FFF8F5]">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-[var(--floppla-marron)] mb-10">Paquetes Floppla</h2>
-      <p class="text-lg mb-12 max-w-3xl mx-auto">Cada plan combina estrategia, diseño y contenido para potenciar tu presencia digital. Escoge el que mejor se adapte a tu visión.</p>
-
-     <div class="grid md:grid-cols-3 gap-10">
-  <!-- PLAN FELINO -->
-  <div class="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition-transform hover:scale-105 border border-[var(--floppla-durazno)] flex flex-col justify-between h-[550px]">
-    <div>
-      <h3 class="text-2xl font-bold text-[var(--floppla-marron)] mb-4">Plan Felino</h3>
-      <p class="text-sm text-gray-500 mb-4">(Duración: 1 mes)</p>
-      <ul class="text-left text-[var(--floppla-negro)] leading-relaxed mb-6">
-        <li>• Diseño de logotipo, imagotipo e isotipo.</li>
-        <li>• Creación de videos para Instagram y TikTok.</li>
-        <li>• Gestión de redes sociales (Instagram, TikTok).</li>
-      </ul>
-    </div>
-    <div class="mt-auto">
-      <p class="font-bold text-xl text-[var(--floppla-marron)] mb-4">COP $1.100.000</p>
-      <a href="Contacto.html" class="bg-[var(--floppla-marron)] text-white px-6 py-3 rounded-full hover:bg-[var(--floppla-durazno)] transition font-medium inline-block">Solicitar Plan</a>
-    </div>
-  </div>
-
-  <!-- PLAN FLOPPLA SOUL -->
-  <div class="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition-transform hover:scale-105 border border-[var(--floppla-durazno)] flex flex-col justify-between h-[550px]">
-    <div>
-      <h3 class="text-2xl font-bold text-[var(--floppla-marron)] mb-4">Plan Floppla Soul</h3>
-      <p class="text-sm text-gray-500 mb-4">(Duración: 2 meses)</p>
-      <ul class="text-left text-[var(--floppla-negro)] leading-relaxed mb-6">
-        <li>• Diseño de logotipo, imagotipo e isotipo.</li>
-        <li>• Creación de videos en redes sociales.</li>
-        <li>• Gestión de plataformas (Instagram, TikTok).</li>
-        <li>• Creación del manual corporativo e infografía empresarial.</li>
-      </ul>
-    </div>
-    <div class="mt-auto">
-      <p class="font-bold text-xl text-[var(--floppla-marron)] mb-4">COP $1.820.000</p>
-      <a href="Contacto.html" class="bg-[var(--floppla-marron)] text-white px-6 py-3 rounded-full hover:bg-[var(--floppla-durazno)] transition font-medium inline-block">Solicitar Plan</a>
-    </div>
-  </div>
-
-  <!-- PLAN CARACAL VIP -->
-  <div class="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition-transform hover:scale-105 border border-[var(--floppla-durazno)] flex flex-col justify-between h-[550px]">
-    <div>
-      <h3 class="text-2xl font-bold text-[var(--floppla-marron)] mb-4">Plan Caracal VIP</h3>
-      <p class="text-sm text-gray-500 mb-4">(Duración: 3 meses)</p>
-      <ul class="text-left text-[var(--floppla-negro)] leading-relaxed mb-6">
-        <li>• Diseño de logotipo, imagotipo e isotipo.</li>
-        <li>• Creación de videos en plataformas (Instagram, TikTok).</li>
-        <li>• Gestión de redes sociales.</li>
-        <li>• Manual corporativo e infografía empresarial.</li>
-        <li>• Branding avanzado y papelería corporativa.</li>
-      </ul>
-    </div>
-    <div class="mt-auto">
-      <p class="font-bold text-xl text-[var(--floppla-marron)] mb-4">COP $2.500.000</p>
-      <a href="Contacto.html" class="bg-[var(--floppla-marron)] text-white px-6 py-3 rounded-full hover:bg-[var(--floppla-durazno)] transition font-medium inline-block">Solicitar Plan</a>
-    </div>
-  </div>
-</div>
-
-
-      <p class="text-sm text-gray-600 mt-10">*Los paquetes combinados (logo + redes sociales + video) tienen un <strong>5% de descuento</strong>.</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-white text-center py-6 border-t">
-    <p class="text-gray-500 text-sm">© 2025 Floppla Studios. Todos los derechos reservados.</p>
-  </footer>
 
 </body>
 </html>

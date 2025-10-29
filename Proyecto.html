@@ -5,40 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto Creativo | Deportivas Gerc</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4/turn.min.css">
   <style>
     :root {
       --Floppa-negro: #1C1C1B;
       --Floppa-marron: #AA6C43;
       --Floppa-durazno: #E2A688;
     }
-
-    /* Estilo del visor tipo flipbook */
-    #flipbook {
-      width: 90%;
-      max-width: 900px;
-      height: 600px;
-      margin: 0 auto;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      border-radius: 16px;
-      background-color: #fff;
-    }
-
-    #flipbook .page {
-      background-color: #FFF8F5;
-      border-radius: 16px;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .flip-controls {
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body class="bg-[#FFF8F5] text-[var(--Floppa-negro)]">
 
-  <!-- NAVBAR -->
+ <!-- NAVBAR -->
   <header class="bg-white shadow-md fixed w-full top-0 z-50">
     <nav class="container mx-auto flex justify-between items-center p-4">
       <a href="index.html" class="flex items-center gap-2">
@@ -52,6 +29,7 @@
         <li><a href="Contacto.html" class="hover:text-[var(--Floppa-marron)]">Contacto</a></li>
       </ul>
 
+      <!-- Botón hamburguesa -->
       <button id="menu-btn" class="md:hidden text-[var(--Floppa-marron)]">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
           viewBox="0 0 24 24" stroke="currentColor">
@@ -86,68 +64,306 @@
     <p class="max-w-2xl mx-auto mt-4 text-lg">“Calidad que se ve”</p>
   </section>
 
+  <!-- IDEA INICIAL -->
+  <section class="py-20 bg-white text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-6">Idea Inicial del Logo</h3>
+      <p class="text-lg mb-8">
+        Antes de llegar al diseño final, el cliente deseaba un logo que representara dinamismo, energía y movimiento, reflejando la esencia deportiva de su marca.
+      </p>
+      <div class="bg-[#FFF2E8] p-10 rounded-3xl shadow-lg w-fit mx-auto transition-transform duration-500 hover:scale-105">
+        <img src="BocetoInicial.jpg" alt="Boceto inicial Gerc" class="max-h-[600px] w-auto mx-auto rounded-2xl shadow-md">
+      </div>
+      <p class="text-sm text-gray-600 mt-4">Boceto de referencia conceptual — ejemplo de idea inicial del cliente.</p>
+    </div>
+  </section>
+
+  <!-- LOGO FINAL INTERACTIVO -->
+  <section class="py-20 text-center bg-[#FFF2E8] relative overflow-hidden">
+    <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-10">Logo Final</h3>
+
+    <div class="relative flex justify-center mb-16 group">
+      <div class="bg-white p-10 rounded-3xl shadow-xl w-fit relative transition-transform duration-500 group-hover:scale-105">
+        <img src="LogoGerc.png" alt="Logo Deportivas Gerc" class="max-h-80 w-auto mx-auto">
+        
+        <!-- Flechas -->
+        <div class="absolute opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out -top-6 left-1/2 -translate-x-[130%] flex flex-col items-center">
+          <div class="w-1 h-12 bg-[#D62828] rounded-full animate-bounce"></div>
+          <div class="bg-[#D62828] text-white text-sm px-3 py-1 rounded-full mt-2 shadow-md">
+            Pasión y Energía
+          </div>
+        </div>
+
+        <div class="absolute opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out bottom-0 right-1/2 translate-x-[130%] flex flex-col items-center delay-200">
+          <div class="w-1 h-12 bg-[#7B3F00] rounded-full animate-bounce"></div>
+          <div class="bg-[#7B3F00] text-white text-sm px-3 py-1 rounded-full mt-2 shadow-md">
+            Estabilidad y Confianza
+          </div>
+        </div>
+
+        <div class="absolute opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out bottom-10 left-1/2 -translate-x-[170%] flex flex-col items-center delay-300">
+          <div class="w-1 h-12 bg-black rounded-full animate-bounce"></div>
+          <div class="bg-black text-white text-sm px-3 py-1 rounded-full mt-2 shadow-md">
+            Elegancia y Fuerza
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-left px-6">
+      <h4 class="text-2xl font-semibold text-[var(--Floppa-marron)] mb-4 text-center">Psicología del Color y Símbolo</h4>
+      <p class="text-lg leading-relaxed mb-4">
+        El logotipo de <strong>Deportivas Gerc</strong> combina los tonos <strong>rojo, café y negro</strong>, que transmiten fuerza, elegancia y pasión por el movimiento.  
+        El rojo refleja <strong>energía y determinación</strong>, el café aporta <strong>seguridad y conexión con lo natural</strong>, y el negro proyecta <strong>poder, sofisticación y confianza</strong>.
+      </p>
+      <p class="text-lg leading-relaxed">
+        El ícono del <strong>león</strong> representa el liderazgo, la valentía y el dominio, reforzando la identidad de una marca deportiva que inspira grandeza, perseverancia y orgullo.
+      </p>
+    </div>
+  </section>
+
+  <!-- APLICACIONES -->
+  <section class="py-20 bg-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-8">Aplicaciones de Marca</h3>
+      <p class="text-lg leading-relaxed mb-12">
+        El desarrollo incluyó tarjetas de presentación, hoja membretada y materiales digitales, creando una identidad visual coherente y adaptable para diferentes soportes.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-[#FFF8F5] p-6 rounded-2xl shadow-md">
+          <h4 class="text-xl font-semibold text-[var(--Floppa-marron)] mb-2">Tarjeta de Presentación (Frontal)</h4>
+          <img src="Tarjeta1.jpg" alt="Tarjeta Gerc Frente" class="rounded-xl shadow-sm mx-auto">
+        </div>
+        <div class="bg-[#FFF8F5] p-6 rounded-2xl shadow-md">
+          <h4 class="text-xl font-semibold text-[var(--Floppa-marron)] mb-2">Tarjeta de Presentación (Reverso)</h4>
+          <img src="Tarjeta2.jpg" alt="Tarjeta Gerc Reverso" class="rounded-xl shadow-sm mx-auto">
+        </div>
+      </div>
+
+      <div class="mt-12 bg-[#FFF8F5] p-8 rounded-2xl shadow-md">
+        <h4 class="text-xl font-semibold text-[var(--Floppa-marron)] mb-4">Hoja Membretada</h4>
+        <div class="flex justify-center">
+          <img src="HojaMembretada.jpg" alt="Hoja membretada Gerc" class="rounded-xl shadow-sm max-w-[50%] mx-auto">
+        </div>
+      </div>
+
+      <div class="mt-12 bg-[#FFF8F5] p-8 rounded-2xl shadow-md">
+        <h4 class="text-xl font-semibold text-[var(--Floppa-marron)] mb-4">Redes Sociales</h4>
+        <p class="text-lg mb-6">
+          Para fortalecer la presencia digital de la marca, se crearon diseños adaptados a redes sociales y se estableció una estética coherente con su identidad visual.  
+          Puedes visitar su perfil oficial en Instagram haciendo clic abajo:
+        </p>
+        <a href="https://www.instagram.com/deportivas.gerc?igsh=MXc3dnAzZXpja2hxMA==" target="_blank" class="inline-block bg-[var(--Floppa-marron)] text-white px-6 py-3 rounded-full hover:bg-[var(--Floppa-durazno)] transition font-medium">
+          Visitar Instagram de Deportivas Gerc
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTRATEGIA TRANSMEDIA -->
+  <section class="py-20 bg-[#FFF2E8] text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-8">Estrategia Transmedia</h3>
+      <p class="text-lg leading-relaxed mb-10">
+        Como parte del desarrollo comunicativo de <strong>Deportivas Gerc</strong>, se diseñó una <strong>estrategia transmedia</strong> para conectar con distintos públicos a través de múltiples plataformas digitales.  
+        Esta estrategia busca amplificar la identidad de la marca en redes sociales, adaptando los mensajes y recursos visuales según la edad, intereses y hábitos de consumo del público objetivo.
+      </p>
+
+      <div class="bg-white p-6 rounded-3xl shadow-md">
+        <img src="MapaTransmedia.jpg" alt="Mapa de Estrategia Transmedia Deportivas Gerc" class="rounded-2xl w-full max-w-3xl mx-auto transition-transform duration-500 hover:scale-105">
+      </div>
+
+      <p class="text-md text-gray-600 mt-6 max-w-3xl mx-auto">
+        El mapa transmedia muestra cómo la marca utiliza diferentes canales como <strong>Instagram, TikTok, Facebook y WhatsApp</strong>  
+        para segmentar su comunicación y fortalecer la relación con públicos jóvenes, adultos y deportistas de distintas edades.
+      </p>
+    </div>
+  </section>
+
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Creativo | Deportivas Gerc</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Librería PDF.js para leer el PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+  <style>
+    :root {
+      --Floppa-negro: #1C1C1B;
+      --Floppa-marron: #AA6C43;
+      --Floppa-durazno: #E2A688;
+    }
+
+    body {
+      background-color: #FFF8F5;
+      color: var(--Floppa-negro);
+    }
+
+    /* Flipbook */
+    .flipbook-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 600px;
+      margin: 0 auto;
+      perspective: 2000px;
+    }
+
+    .flipbook-page {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-origin: left center;
+      transition: transform 1s ease;
+      backface-visibility: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .flipbook-page.flipped {
+      transform: rotateY(-180deg);
+    }
+
+    .flipbook-controls {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    button {
+      transition: transform 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="Logo 50x50.png" alt="Logo Floppla" class="h-10 w-auto">
+      </a>
+
+      <ul class="hidden md:flex gap-8 font-medium">
+        <li><a href="index.html" class="hover:text-[var(--Floppa-marron)]">Inicio</a></li>
+        <li><a href="QuienesSomos.html" class="hover:text-[var(--Floppa-marron)]">Quiénes Somos</a></li>
+        <li><a href="Servicios.html" class="hover:text-[var(--Floppa-marron)]">Servicios</a></li>
+        <li><a href="Contacto.html" class="hover:text-[var(--Floppa-marron)]">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
   <!-- CATÁLOGO -->
   <section class="py-20 bg-white text-center">
     <div class="max-w-5xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-8">Catálogo Interactivo</h3>
+      <h3 class="text-3xl font-bold text-[var(--Floppa-marron)] mb-8">Catálogo de Productos</h3>
       <p class="text-lg leading-relaxed mb-10">
-        Explora el catálogo completo de <strong>Deportivas Gerc</strong> con un efecto de páginas animadas tipo flipbook 📖.  
-        Puedes hojearlo directamente o descargarlo en formato PDF.
+        Explora el catálogo completo de <strong>Deportivas Gerc</strong>.  
+        Usa las flechas para pasar las páginas o descárgalo para consultarlo offline.
       </p>
 
-      <div id="flipbook" class="shadow-2xl rounded-3xl overflow-hidden"></div>
+      <!-- Flipbook -->
+      <div id="flipbook" class="flipbook-container"></div>
 
-      <div class="flip-controls">
-        <button id="prev" class="bg-[var(--Floppa-marron)] text-white px-4 py-2 rounded-full hover:bg-[var(--Floppa-durazno)] mr-3">⬅️ Anterior</button>
-        <button id="next" class="bg-[var(--Floppa-marron)] text-white px-4 py-2 rounded-full hover:bg-[var(--Floppa-durazno)]">Siguiente ➡️</button>
+      <!-- Controles -->
+      <div class="flipbook-controls mt-8">
+        <button id="prevPage" class="bg-[var(--Floppa-marron)] text-white px-6 py-2 rounded-full hover:bg-[var(--Floppa-durazno)] transition">⬅ Anterior</button>
+        <button id="nextPage" class="bg-[var(--Floppa-marron)] text-white px-6 py-2 rounded-full hover:bg-[var(--Floppa-durazno)] transition">Siguiente ➡</button>
       </div>
 
+      <!-- Botón de descarga -->
       <div class="mt-8">
-        <a href="Catalogo.pdf" download 
-          class="inline-block bg-[var(--Floppa-marron)] text-white px-8 py-3 rounded-full hover:bg-[var(--Floppa-durazno)] transition font-semibold shadow-md">
+        <a href="Catalogo.pdf" download class="inline-block bg-[var(--Floppa-marron)] text-white px-8 py-3 rounded-full hover:bg-[var(--Floppa-durazno)] transition font-semibold shadow-md">
           Descargar Catálogo en PDF
         </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-white text-center py-6 border-t mt-12">
-    <p class="text-gray-500 text-sm">© 2025 Floppla. Proyecto realizado por el equipo creativo.</p>
-  </footer>
 
-  <!-- Librerías -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4/turn.min.js"></script>
-  <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 
+  <!-- Script del Flipbook -->
   <script>
-    const pdfPath = 'Catalogo.pdf';
-    const flipbook = $('#flipbook');
+    const flipbookContainer = document.getElementById('flipbook');
+    const pdfPath = "Catalogo.pdf"; // tu archivo PDF
+    const prevBtn = document.getElementById('prevPage');
+    const nextBtn = document.getElementById('nextPage');
 
-    const renderPDF = async () => {
+    let currentPage = 0;
+    let totalPages = 0;
+    let pages = [];
+
+    async function renderPDF() {
       const pdf = await pdfjsLib.getDocument(pdfPath).promise;
-      for (let i = 1; i <= pdf.numPages; i++) {
+      totalPages = pdf.numPages;
+
+      for (let i = 1; i <= totalPages; i++) {
         const page = await pdf.getPage(i);
-        const viewport = page.getViewport({ scale: 1.5 });
+        const viewport = page.getViewport({ scale: 1.2 });
+
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
         canvas.height = viewport.height;
         canvas.width = viewport.width;
-        await page.render({ canvasContext: context, viewport }).promise;
-        const img = new Image();
-        img.src = canvas.toDataURL();
-        const pageDiv = $('<div />', { class: 'page' }).append(img);
-        flipbook.append(pageDiv);
-      }
-      flipbook.turn({ width: 900, height: 600, autoCenter: true });
-    };
 
-    $('#prev').on('click', () => flipbook.turn('previous'));
-    $('#next').on('click', () => flipbook.turn('next'));
+        await page.render({ canvasContext: context, viewport: viewport }).promise;
+
+        const pageDiv = document.createElement('div');
+        pageDiv.className = "flipbook-page";
+        pageDiv.appendChild(canvas);
+        flipbookContainer.appendChild(pageDiv);
+        pages.push(pageDiv);
+      }
+
+      updatePages();
+    }
+
+    function updatePages() {
+      pages.forEach((page, index) => {
+        page.style.transform = index < currentPage ? "rotateY(-180deg)" : "rotateY(0deg)";
+        page.style.zIndex = totalPages - index;
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentPage > 0) {
+        currentPage--;
+        updatePages();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        updatePages();
+      }
+    });
 
     renderPDF();
   </script>
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-center py-6 border-t mt-12">
+    <p class="text-gray-500 text-sm">© 2025 Floppla. Proyecto realizado por el equipo creativo.</p>
+  </footer>
 
 </body>
 </html>
